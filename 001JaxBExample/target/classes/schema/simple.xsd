@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.myapp.com/Person" xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+    xmlns:tns="http://www.myapp.com/Person" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <!-- XML root elements -->
+    <xsd:element name="PersonRequest"  type="tns:PersonDto" />
+    <xsd:complexType name="PersonDto">
+        <xsd:sequence>
+            <xsd:element name="firstName" type="string" />
+            <xsd:element name="lastName" type="string" />
+            <xsd:element name="address" type="tns:AddressDto" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="AddressDto">
+        <xsd:sequence>
+            <xsd:element name="street" type="string" />
+            <xsd:element name="suburb" type="string" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

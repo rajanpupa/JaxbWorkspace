@@ -1,0 +1,4 @@
+com\myapp\schema\v1\dto\AddressDto.class
+com\myapp\schema\v1\dto\ObjectFactory.class
+com\myapp\schema\v1\dto\PersonDto.class
+com\myapp\schema\v1\dto\package-info.class
