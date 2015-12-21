@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--  
+
+    xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+    
+    attributeFormDefault="unqualified" 
+    
+    elementFormDefault="qualified"
+
+-->
 <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.myapp.com/Person" xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
-    xmlns:tns="http://www.myapp.com/Person" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    attributeFormDefault="unqualified" elementFormDefault="qualified">
+    targetNamespace="http://www.myapp.com/Person" 
+    xmlns:tns="http://www.myapp.com/Person" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    >
+    
     <!-- XML root elements -->
     <xsd:element name="PersonRequest"  type="tns:PersonDto" />
     <xsd:complexType name="PersonDto">
