@@ -1,0 +1,14 @@
+package org.rajan.javabrains.Messanger.model;
+
+import java.util.Date;
+
+public class Profile {
+
+	private long id;
+	private String profileName;
+	private String firstName;
+	private String lastName;
+	private Date created;
+	
+	
+}

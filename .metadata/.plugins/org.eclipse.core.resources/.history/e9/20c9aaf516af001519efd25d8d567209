@@ -1,0 +1,8 @@
+package org.rajan.javabrains.Messanger.service;
+
+public class MessageService {
+
+	public List<Message> getAllMessage(){
+		
+	}
+}

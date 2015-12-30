@@ -1,0 +1,13 @@
+package org.rajan.javabrains.Messanger;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+@Path("/messages")
+public class MessageResource {
+
+	@GET
+	public String getMessages(){
+		return "Hello World ";
+	}
+}

@@ -1,0 +1,8 @@
+package org.rajan.javabrains.Messanger;
+
+public class MessageResource {
+
+	public String getMessages(){
+		return "Hello World ";
+	}
+}
