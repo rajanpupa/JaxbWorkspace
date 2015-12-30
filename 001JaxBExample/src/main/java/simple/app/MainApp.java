@@ -1,12 +1,13 @@
 package simple.app;
 
+import java.awt.TrayIcon.MessageType;
 import java.io.StringWriter;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-
-import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
+import javax.xml.namespace.QName;
 
 import simple.jaxb.dto.AddressDto;
 import simple.jaxb.dto.PersonDto;
@@ -19,7 +20,11 @@ public class MainApp {
 		Marshaller marshaller = context.createMarshaller();
 		
 		StringWriter writer = new StringWriter();
-		marshaller.marshal(getPerson("Rajan"), writer);
+		
+		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+		marshaller.marshal( new JAXBElement<PersonDto>(new QName("uri","local"), 
+				PersonDto.class, getPerson("Rajan")), writer);
+		//marshaller.marshal(getPerson("Rajan"), writer);
 		
 		System.out.println(writer);
 	}
