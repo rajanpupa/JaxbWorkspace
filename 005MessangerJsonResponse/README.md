@@ -6,5 +6,9 @@
 	* uncomment the moxy dependency on the pom,
 	* OR, add the jackson dependency in the pom
 	
+	#### Also
+	* You could put both Mediatype.Application_json, and Mediatype.Application_xml inside the @Produces tag, depending on the `Accept: application\json` header, the content is determined.
+	* This behavior is called content negotiation
+	
 ### Reference
 https://javabrains.io/courses/javaee_jaxrs/lessons/Returning-JSON-Response
